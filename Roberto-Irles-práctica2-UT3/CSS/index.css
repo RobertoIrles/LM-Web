@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.polaroid {
+    background-color: black;
+    padding: 10px 10px 40px 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.oferta {
+    position: relative;
+}
+
+.oferta::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 18%;
+    height: 15%;
+    background: url(../Fotos/oferta.png) no-repeat center center;
+    background-size: cover;
+    animation: parpadeo;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.fl_sa {
+    justify-content: space-around;
+}
+
+.contraseña {
+    color: rgb(43, 43, 43);
+    font-size: smaller;
+}
+
+.contraseña:hover {
+    color: lightskyblue;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.menu:hover {
+    background-color: rgba(99, 99, 99, 0.195);
+}
+
+.fondo-transparente {
+    
+    background-color: rgba(0, 0, 0, 0.268);
+    border-radius: 3px;
+    border: solid black 1px;
+}
+
+body {
+    background-image: url(../Fotos/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+form {
+    justify-content: start;
+    align-items: center;
+    height: auto;
+    width: auto;
+
+    border: 1px solid black;
+    border-radius: 14px;
+    padding: 1em;
+}
+
+
+.pagina-principal {
+    justify-content: end;
+    align-items: center;
+    height: 20vh;
+    max-width: 100vw;
+    background-image: url(../Fotos/logotipo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20vh;
+}
+
+.pagina-productos {
+    justify-content: center;
+    height: 20vh;
+    max-width: 100vw;
+}
+
+.logotipo {
+    object-fit: cover;
+    height: 100%;
+}
+
+section {
+    max-width: 80vw;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+    min-width: 200px;
+}
+
+article {
+    min-height: 94%;
+}
+
+nav {
+    min-height: 6%;
+}
+
+main {
+    justify-content: space-around;
+    min-height: 75vh;
+    max-width: 100vw;
+}
+
+footer {
+    justify-content: end;
+    min-height: 5vh;
+    max-width: 100vw;
+}
+
+.submit {
+    box-shadow: 0px 10px 14px -7px #3e7327;
+    background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+    background-color: #77b55a;
+    border-radius: 4px;
+    border: 1px solid #4b8f29;
+    display: inline-block;
+    cursor: pointer;
+    color: #c9c9c9;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #5b8a3c;
+}
+
+.articulos {
+    width: 20%;
+    height: min-content;
+    transition: transform 0.3s;
+}
+
+.articulos:hover {
+    transform: rotate(5deg) scale(110%);
+}
+
+/* ToolTip */
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    position: absolute;
+    opacity: 0;
+    padding: 0.2em;
+    left: 105%;
+    top: 18%;
+    border: solid 0.5px lightgrey;
+    border-radius: 10% / 70%;
+    font-size: xx-small;
+    background: rgb(32, 0, 0);
+    background: linear-gradient(90deg, rgba(32, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6134103299522935) 50%, rgba(32, 0, 0, 1) 100%);
+    color: lightgrey;
+    width: max-content;
+    /* transition: opacity 2s; */
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent lightgrey transparent transparent;
+
+}
+
+.tooltip:hover .tooltiptext {
+    animation: desaparecer;
+    animation-duration: 10s;
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Busqueda */
+
+.busqueda-boton {
+    background-color: transparent;
+    border: none;
+    background-image: url(../Fotos/search-icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 6vh;
+    width: 6vw;
+}
+
+.busqueda-imagen {
+    width: 20px;
+    height: auto;
+}
+
+.busqueda-imagen:hover {
+    cursor: pointer;
+}
+.busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-right: 2vw;
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    } 50% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
