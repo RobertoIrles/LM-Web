@@ -9,7 +9,7 @@ main {
 }
 
 div.galeria {
-    background-color: gray;
+    background-color: rgba(53, 91, 92, 0.85);
     width: 85vw;
     min-height: 75vh;
     justify-content: center;
