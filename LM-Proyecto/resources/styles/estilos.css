@@ -46,6 +46,7 @@ header ul {
 header.no-portada {
     background-color: #355b5c;
     height: 15vh;
+    z-index: 1;
 }
 
 @font-face {
